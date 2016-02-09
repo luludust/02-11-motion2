@@ -72,6 +72,8 @@ public class DrawingView extends View {
     {
         super.onDraw(canvas); //make sure to have the parent do any drawing it is supposed to!
 
+        ball.cy += 3;
+
         canvas.drawColor(Color.BLACK); //black out the background
 
         canvas.drawCircle(ball.cx, ball.cy, ball.radius, redPaint); //we can draw directly onto the canvas
@@ -83,6 +85,8 @@ public class DrawingView extends View {
         }
         canvas.drawBitmap(bmp, 0, 0, null); //and then draw the BitMap onto the canvas.
         //Canvas bmc = new Canvas(bmp); //we can also make a canvas out of a Bitmap to draw on that (like fetching g2d from a BufferedImage)
+
+        invalidate();
     }
 
 }
