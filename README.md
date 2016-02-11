@@ -38,7 +38,7 @@ For an API < 21, there's a lot less work to do: simply call the `SoundPool` <a h
 ### 3. Load Sounds
 After you've instantiated your `SoundPool`, you'll need to load the sounds into it to make them available (this is still in your `initializeSoundPool()` method). You can load sounds by calling the <a href="http://developer.android.com/reference/android/media/SoundPool.html#load(android.content.Context, int, int)">`.load()`</a> method on the `SoundPool` object.
 - The version of the `.load()` method you should use takes in a Context, a resource id, and a priority (`1` works fine as a priority).
-- The sound resources are stored in the `raw` resource folder. This is a folder for resources that are not processed (compiled) by Android, but are still assigned `ids` (based on the filename) so you can access them easily from the code. They are reference as `R.id.filename`
+- The sound resources are stored in the `raw` resource folder. This is a folder for resources that are not processed (compiled) by Android, but are still assigned `ids` (based on the filename) so you can access them easily from the code. They are reference as `R.raw.filename`
 - The `.load()` method will return a "sound id" (an `int`) for the loaded sound. You'll want to save these ids, like as instance variables.
 
 In order to play sounds, we'll need to know if they have been successfully loaded. But since loading is _asynchronous_, you'll need to specify a listener and callback to react to when "load events" occur.
