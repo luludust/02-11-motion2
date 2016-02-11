@@ -47,23 +47,11 @@ public class MotionActivity extends Activity {
                 view.ball.cy = event.getY();
                 return true;
             case MotionEvent.ACTION_UP:
-                Log.v(TAG, "Finger up!");
                 return true;
-            case MotionEvent.ACTION_POINTER_DOWN:
-                //second finger
-
-                //multi-touch pseudo-example thing
-                //int mSecondPointerId = event.getPointerId(1);
-
-
             case MotionEvent.ACTION_MOVE:
                 //shold be synchronized!
 //                view.ball.cx = event.getX();
 //                view.ball.cy = event.getY();
-
-                //event.findPointerIndex(mSecondPointerId)
-                    //respond to second finger
-
                 return true;
             default:
                 return super.onTouchEvent(event);
@@ -90,16 +78,4 @@ public class MotionActivity extends Activity {
             return true; //we got this
         }
     }
-
-    //starter pseudo-example
-    class MyScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
-
-        @Override
-        public boolean onScale(ScaleGestureDetector detector) {
-            detector.getScaleFactor();
-
-            return super.onScale(detector);
-        }
-    }
-
 }

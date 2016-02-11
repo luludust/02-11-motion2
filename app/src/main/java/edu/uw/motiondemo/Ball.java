@@ -19,4 +19,15 @@ public class Ball {
         this.dy = 0;
     }
 
+    public void setRadius(float radius){
+        this.radius = radius;
+    }
+
+    public void setX(float cx){
+        this.cx = cx;
+    }
+
+    public void setY(float cy){
+        this.cy = cy;
+    }
 }
